@@ -19,7 +19,7 @@ for line in sys.stdin:
     hour_ip, count = line.split('\t', 1)
     try:
         count = int(count)
-        dict_hour_ip_count[hour_ip[:5]][hour_ip[6:]] += count
+        dict_hour_ip_count[hour_ip] =dict_hour_ip_count.get(hour_ip,0) + count
     except ValueError:
         pass
 
