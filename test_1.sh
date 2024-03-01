@@ -1,8 +1,8 @@
 bash start.sh
-/usr/local/hadoop/bin/hdfs dfs -rm -r input/
-/usr/local/hadoop/bin/hdfs dfs -rm -r output/
-/usr/local/hadoop/bin/hdfs dfs -mkdir -p input/
-/usr/local/hadoop/bin/hdfs dfs -copyFromLocal access.log input/
+/usr/local/hadoop/bin/hdfs dfs -rm -r input
+/usr/local/hadoop/bin/hdfs dfs -rm -r output
+/usr/local/hadoop/bin/hdfs dfs -mkdir -p input
+/usr/local/hadoop/bin/hdfs dfs -copyFromLocal access.log input
 
 #read -p "Enter the hour range (e.g., 0-1): " hour_range
 
@@ -11,8 +11,8 @@ bash start.sh
 -file mapper_1.py -mapper mapper_1.py \
 
 -file reducer_1.py -reducer reducer_1.py \
--input input/* -output output/
+-input input* -output output
 /usr/local/hadoop/bin/hdfs dfs -cat output/part-00000
-/usr/local/hadoop/bin/hdfs dfs -rm -r input/
-/usr/local/hadoop/bin/hdfs dfs -rm -r output/
+/usr/local/hadoop/bin/hdfs dfs -rm -r input
+/usr/local/hadoop/bin/hdfs dfs -rm -r output
 bash stop.sh
