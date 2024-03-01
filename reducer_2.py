@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 #reducer
 import sys
 from operator import itemgetter
