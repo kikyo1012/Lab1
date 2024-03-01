@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 #mapper 2 
 
 import sys
